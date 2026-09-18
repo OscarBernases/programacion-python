@@ -17,3 +17,22 @@ Escribe un programa que:
    que el objeto al que apunta la primera variable es de tipo int y el de
    la segunda es de tipo str.
 """
+
+a=6
+
+print(type(6))
+print(type(a))
+
+b=a
+print(type(6))
+print(type(b))
+
+print(a is b)
+print(a is not b)
+
+a = "Hola"
+print(type("Hola"))
+print(type(a))
+
+print(isinstance(a, str))
+print(isinstance(b, int))

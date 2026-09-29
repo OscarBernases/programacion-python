@@ -1,0 +1,34 @@
+"""
+Escribe un programa que realice las siguientes operaciones:
+    Leer por teclado un número comprendido entre 1 y 10. Se vuelve a pedir hasta que
+    no se introduzca el número correcto.
+
+    Una vez que ha leído el número se tiene que mostrar su tabla de multiplicar.
+
+    Después de mostrar la tabla de multiplicar se tiene que preguntar al usuario si
+    desea introducir otro número o no. Si el usuario selecciona que quiere continuar el
+    programa tendrá que volver a ejecutarse y repetir los mismos pasos. Si el usuario
+    indica que no quiere continuar el programa finaliza.
+"""
+
+seguir = True
+
+while seguir == True:
+    num = int(input("Introduce un número (1 al 10): "))
+
+    while num < 1 or num > 10:
+        num = int(input("Introduce un número (1 al 10): "))
+
+    else:
+        print(f"TABLA DE MULTIPLICAR DEL {num}:")
+
+        for i in range(1, 11):
+            print(f"{num} x {i} = {num * i}")
+
+        opcion_seguir = input("¿Quieres continuar? (s/n): ")
+
+        if opcion_seguir == "s":
+            seguir = True
+        else:
+            print("Programa finalizado.")
+            seguir = False

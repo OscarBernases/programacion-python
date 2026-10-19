@@ -20,18 +20,18 @@ def mostrar_menu():
     print("4. Salir")
 
 def main():
-    while True:
-        mostrar_menu()
-        opcion = input("Introduce una opción (1-4): ")
-        if opcion == "1":
+    mostrar_menu()
+    opcion = input("Introduce una opción (1-4): ")
+    match opcion:
+        case "1":
             opcion1()
-        elif opcion == "2":
+        case "2":
             opcion2()
-        elif opcion == "3":
+        case "3":
             opcion3()
-        elif opcion == "4":
-            break
-        else:
+        case "4":
+            print("Saliendo del programa...")
+        case _:
             print("Opción no válida. Inténtalo de nuevo.")
 
 def opcion1():
